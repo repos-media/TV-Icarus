@@ -1,0 +1,212 @@
+~ TVRage XML Structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/info.php?page=main
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Short Search }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/feeds/search.php?show={variable}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- show
+ |---- showid
+ |---- name
+ |---- link
+ |---- country
+ |---- started
+ |---- ended
+ |---- seasons
+ |---- status
+ |---- classification
+ |---- genres
+ |------ genre
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Full Search }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/feeds/full_search.php?show={variable}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- show
+ |---- showid
+ |---- name
+ |---- link
+ |---- country
+ |---- started
+ |---- ended
+ |---- seasons
+ |---- status
+ |---- runtime
+ |---- classification
+ |------ genre
+ |---- network
+ |---- airtime
+ |---- airday
+ |---- akas
+ |---- aka (show name in diferent languages)
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Short Show Info }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/feeds/showinfo.php?sid={integer}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- showid
+ |-- showname
+ |-- showlink
+ |-- seasons
+ |-- started
+ |-- startdate
+ |-- ended
+ |-- origin_country
+ |-- status
+ |-- classification
+ |-- genres
+ |---- genre
+ |-- runtime
+ |-- network
+ |-- airtime
+ |-- timezone
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Full Show Info }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/feeds/full_show_info.php?sid={integer}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- name
+ |-- totalseasons
+ |-- showid
+ |-- showlink
+ |-- started
+ |-- ended
+ |-- image
+ |-- origin_country
+ |-- status
+ |-- classification
+ |-- genres
+ |---- genre
+ |-- runtime
+ |-- network
+ |-- airtime
+ |-- airday
+ |-- timezone
+ |-- Episodelist
+ |---- Season
+ |------ no (season number)
+ |---- episode
+ |------ epnum
+ |------ seasonnum
+ |------ prodnum
+ |------ airdate
+ |------ link
+ |------ title
+ |-- akas
+ |---- aka (show name in diferent languages)
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Short Episode Info }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/feeds/episode_list.php?sid={integer/variable}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- name
+ |-- totalseasons
+ |-- Episodelist
+ |---- Season
+ |------ no (season number)
+ |------ episode
+ |-------- epnum
+ |-------- seasonnum
+ |-------- prodnum
+ |-------- airdate
+ |-------- link
+ |-------- title
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Short Show List }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/feeds/show_list_letter.php?letter={integer/variable}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- show
+ |-- id
+ |-- name
+ |-- country
+ |-- status
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Short Show List }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/feeds/episodeinfo.php?show={variable}&exact=
+ {integer}&ep={integer}x{integer}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- id
+ |-- name
+ |-- link
+ |-- started
+ |-- ended
+ |-- country
+ |-- status
+ |-- classification
+ |-- genres
+ |---- genre
+ |-- airtime
+ |-- runtime
+ |-- episode
+ |---- number
+ |---- title
+ |---- airdate
+ |---- url
+ |-- latestepisode
+ |---- number
+ |---- title
+ |---- airdate
+ |-- nextepisode
+ |---- number
+ |---- title
+ |---- airdate
+ |---- airtime
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Shows Countdown }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://services.tvrage.com/feeds/countdown.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- country
+ |---- show
+ |------ showid
+ |------ showname
+ |------ showlink
+ |------ upcomingep
+ |-------- link
+ |-------- title
+ |-------- epnum
+ |-------- airdate
+ |-------- relativedate
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Short News }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ http://www.tvrage.com/news/rss.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ //
+ |-- item
+ |---- title
+ |---- description
+ |---- link
+ |---- guid
+ |---- pubDate
+ \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

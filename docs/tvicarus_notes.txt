@@ -1,0 +1,68 @@
+TV-Icarus v0.1 by TuxLyn {2012-05-07}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Description }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Create your own informational tv shows websites powered by TVRage.com
+ This script will let you index all the best available tv shows details 
+ right on your website.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Features }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + News page for all of the latest tv shows news.
+ + Shows page for all of the available shows.
+ + Guide page for all of the shows countdown time.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Directory Structure }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ //
+ |-- cache/ (cache location for all xml files)
+ |---- eps (cache location for shows files)
+ |---- lists (cache location for shows categories)
+ |---- countdown.xml
+ |---- news.xml
+ |
+ |-- docs/ (documentations)
+ |---- license.txt :: tv-icarus license agreement, please read it.
+ |---- tvicarus_notes.txt :: this notes that you are reading.
+ |---- tvrage_xml.txt :: API XML structure and urls needed.
+ |
+ |-- images/
+ |
+ |-- pages/
+ |---- footer.php :: footer included with each page.
+ |---- header.php :: header included with each page.
+ |
+ |-- scripts
+ |---- effects.js :: accordion effect for seasons.
+ |---- jquery-min.js :: Minimal compressed jQuery v1.7.2.
+ |---- jquery-ui-min.js :: jQuery UI v1.8.20
+ |
+ |-- style.css
+ |-- config.php :: script configuration file, which you can modify.
+ |-- index.php :: default script page, where everything starts.
+ |-- int.php :: bootstrap file, with all the functions required.
+ \\
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ License }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Please read license.txt in ./docs/ folder.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Supports }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ -- Nginx
+ -- LightTPD
+ -- Apache
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~{ Requirements }~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ -- PHP 5.x or newer.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

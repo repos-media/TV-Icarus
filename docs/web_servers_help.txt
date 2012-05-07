@@ -1,0 +1,42 @@
+ This is web server configuration help, just in case you need it =)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Apache Web Server Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ For apache web server there is .htaccess file included with this script.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Nginx Web Server Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Make sure you change "root" to your web directory and TV-Icarus script folder.
+
+  server {
+    server_name tvic;
+    root /var/www/TV-Icarus;
+    include php.conf;
+    index index.html index.php;
+		try_files $uri $uri/ /index.php;
+  } #TV-Icarus
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  If you like you can use this custom php.conf with your php-fpm setup, then
+  just include it like in the example above.
+  
+	#
+	# /etc/nginx/conf/php.conf
+	#
+
+	location ~ \.php$ {
+		try_files $uri =404;
+		include fastcgi_params;
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
+	} #php
+
+	## EOF: php.conf
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

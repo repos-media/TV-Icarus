@@ -1,0 +1,34 @@
+TV-Icarus v0.1 by TuxLyn {2012-05-07}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ How to install TV-Icarus script on your own website ?
+ 
+ Because TV-Icarus is flat-file based on xml files and cache,
+ there is no need for script installer. Simply follow this 
+ following steps and you will be running your own custom
+ tv shows website in couple of minuts.
+ 
+ 1. Download it from https://github.com/GoTux/PHP/TV-Icarus
+ 
+ 2. Upload it to your own website.
+ 
+ 3. chmod 777 all of cache/ and eps/ with lists/ sub-directories.
+ 
+ 4. edit config.php file for your own domain.
+ 
+  $config['base'] = 'http://yourdomain.com/';
+    Change this to your own domain name from which you will run this script.
+ 
+  $config['page'] = uri(1);
+  $config['args'] = uri(2);
+    Always leave this set to page 1 and args 2, unless you are running tv-icarus
+    from sub-directory. So if you where to run this script form sub-directory.
+    For example http://domain.com/tvicarus/ you would need to change this 
+    page to 2 and args to 3 and so on.
+  
+  $config['title'] = '';
+    Set your websites title in here.
+  
+  $config['tagline'] = '';
+    Set your websites tag-line in here.
+
