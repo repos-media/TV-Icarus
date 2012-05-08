@@ -211,8 +211,6 @@ TD;
 } #foreach-upc
 } #foreach-show
 } #foreach-country
-echo '</table> <p class="info"> For more detailed countdown please see: 
-	<a href="http://tv-schedule.com/">TV-Schedule.com</a> </p>';
 } #guide
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
